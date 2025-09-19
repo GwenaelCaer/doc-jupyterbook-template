@@ -15,8 +15,7 @@ project:
       children:
       - file: markdown.md
       - file: notebook.ipynb
-    # - file: authoring.md
-    - file: build.md
+    - file: deploy.md
     - file: publish.md
 site:
   template: book-theme

@@ -23,7 +23,7 @@ stages:
     - rm -rf _build
     - cd $DOCUMENTATION_SOURCEDIR
     - export BASE_URL="/training/doc-jupyterbook-template"
-    - jupyter book build --html
+    - jupyter book build --html --execute
   artifacts:
     paths:
       - $DOCUMENTATION_BUILDDIR
