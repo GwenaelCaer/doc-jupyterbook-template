@@ -22,7 +22,7 @@ stages:
   script:
     - cd $DOCUMENTATION_SOURCEDIR
     - export BASE_URL="/vre/documentation"
-    - jupyter book build --html
+    - jupyter book build --site
   artifacts:
     paths:
       - $DOCUMENTATION_BUILDDIR
