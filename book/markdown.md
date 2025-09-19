@@ -10,27 +10,39 @@ TO DO (Introduction)
 
 ### Text formatting
 
-- Bold: `**bold text**` → **bold text**  
-- Italic: `*italic text*` → *italic text*  
-- Strikethrough: `~~strikethrough~~` ~~strikethrough~~
+**strong**, _emphasis_, `literal text`, \*escaped symbols\*
 
-### Bullet points list
+### Bullet points and numbered lists
 
-* step 1
-* step 2
-* step 3
+- Lists can start with `-` or `*`
+  * My other, nested
+  * bullet point list!
+
+1. My numbered list
+2. has two points
+
+### Task lists
+
+- [x] Create a community around Jupyter Book
+- [ ] Revolutionize technical communication
 
 ### Quotations
 
-> This is a quote !
+> We know what we are, but know not what we may be.
+>
+> -- Hamlet act 4, Scene 5
 
 ### Math equations
 
 $ax^2 + bx + c = 0$
 
 ### Code blocks
+
 ```python
-print("Hello World!")
+a, b = 10, 8
+c = a + b
+
+print("The sum of", a, "and", b, "is", c)
 ```
 
 ## Directives
@@ -91,7 +103,9 @@ Execute notebook cells, store results, and insert outputs across pages.
 
 ```{mermaid}
 graph LR
-    A[Début] --> B[Étape 1]
-    B --> C[Étape 2]
-    C --> D[Fin]
+    A[Start] --> B[Step 1: Collect Data]
+    B --> C[Step 2: Process Data]
+    C --> D{Success?}
+    D -->|Yes| E[Finish]
+    D -->|No| B
 ```
