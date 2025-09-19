@@ -1,7 +1,7 @@
 variables:
   DOCUMENTATION_PYTHON_REQUIREMENTS: "requirements.txt"
   DOCUMENTATION_SOURCEDIR: "book"
-  DOCUMENTATION_BUILDDIR: "book/_build/site/"
+  DOCUMENTATION_BUILDDIR: "book/_build/html/"
   DOCUMENTATION_BASE_PYTHON_IMAGE: "gitlab-registry.ifremer.fr/ifremer-commons/docker/internal-images/mamba-poetry:24.7.1-2"
 
 stages:
@@ -23,7 +23,7 @@ stages:
     - rm -rf _build
     - cd $DOCUMENTATION_SOURCEDIR
     - export BASE_URL="/training/doc-jupyterbook-template"
-    - jupyter book build --site
+    - jupyter book build --html
   artifacts:
     paths:
       - $DOCUMENTATION_BUILDDIR
