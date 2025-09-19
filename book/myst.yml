@@ -1,0 +1,25 @@
+# See docs at: https://mystmd.org/guide/frontmatter
+version: 1
+project:
+  id: 86267f48-908a-4cde-935a-0a271ea2459a
+  # title:
+  # description:
+  # keywords: []
+  # authors: []
+  # github:
+  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
+  toc:
+    - file: index.md
+    - file: concept.md
+    - title: Write
+      children:
+      - file: markdown.md
+      - file: notebook.ipynb
+    # - file: authoring.md
+    - file: build.md
+    - file: publish.md
+site:
+  template: book-theme
+  options:
+    favicon: https://www.odatis-ocean.fr/typo3conf/ext/odatis_template/Resources/Public/Icons/favicon.ico
+    logo: ../logo.svg

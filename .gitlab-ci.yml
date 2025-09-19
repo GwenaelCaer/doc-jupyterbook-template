@@ -1,0 +1,47 @@
+variables:
+  DOCUMENTATION_PYTHON_REQUIREMENTS: "requirements.txt"
+  DOCUMENTATION_SOURCEDIR: "book"
+  DOCUMENTATION_BUILDDIR: "book/_build/html/"
+  DOCUMENTATION_BASE_PYTHON_IMAGE: "gitlab-registry.ifremer.fr/ifremer-commons/docker/internal-images/mamba-poetry:24.7.1-2"
+
+stages:
+  - documentation
+
+.documentation:python-conda:requirements:
+  image: $DOCUMENTATION_BASE_PYTHON_IMAGE
+  before_script:
+    - pip install --upgrade pip
+    - '[[ "_$DOCUMENTATION_CONDA_REQUIREMENTS" != "_" ]] &&  mamba env update -n base --file $DOCUMENTATION_CONDA_REQUIREMENTS'
+    - '[[ "_$DOCUMENTATION_POETRY_DIRECTORY" != "_" ]] &&  mamba run -n base poetry install $DOCUMENTATION_POETRY_OPTS'
+    - '[[ "_$DOCUMENTATION_PYTHON_REQUIREMENTS" != "_" ]] &&  pip install -r $DOCUMENTATION_PYTHON_REQUIREMENTS'
+
+.documentation:myst:build:
+  extends:
+    - .documentation:python-conda:requirements
+  script:
+    - pip install mystmd
+    - cd $DOCUMENTATION_SOURCEDIR
+    - export BASE_URL="/vre/documentation"
+    - myst build --html
+  artifacts:
+    paths:
+      - $DOCUMENTATION_BUILDDIR
+    expire_in: 1 week
+
+.documentation:myst:gitlab-pages:
+  extends:
+    - .documentation:myst:build
+  after_script:
+    - mv $DOCUMENTATION_BUILDDIR public
+  artifacts:
+    paths:
+      - public
+    expire_in: 1 week
+
+pages:
+  stage: documentation
+  extends:
+    - .documentation:myst:gitlab-pages
+  # rules:
+  #   - !reference [.documentation:publish:rules, rules]
+  #   - when: never
