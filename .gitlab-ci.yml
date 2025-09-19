@@ -20,8 +20,9 @@ stages:
   extends:
     - .documentation:python-conda:requirements
   script:
+    - rm -rf _build
     - cd $DOCUMENTATION_SOURCEDIR
-    - export BASE_URL="/vre/documentation"
+    - export BASE_URL="/training/doc-jupyterbook-template"
     - jupyter book build --site
   artifacts:
     paths:
