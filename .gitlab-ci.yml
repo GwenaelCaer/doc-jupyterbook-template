@@ -11,6 +11,7 @@ stages:
   image: $DOCUMENTATION_BASE_PYTHON_IMAGE
   before_script:
     - pip install --upgrade pip
+    - mamba install -n base -c conda-forge nodejs
     - '[[ "_$DOCUMENTATION_CONDA_REQUIREMENTS" != "_" ]] &&  mamba env update -n base --file $DOCUMENTATION_CONDA_REQUIREMENTS'
     - '[[ "_$DOCUMENTATION_POETRY_DIRECTORY" != "_" ]] &&  mamba run -n base poetry install $DOCUMENTATION_POETRY_OPTS'
     - '[[ "_$DOCUMENTATION_PYTHON_REQUIREMENTS" != "_" ]] &&  pip install -r $DOCUMENTATION_PYTHON_REQUIREMENTS'
