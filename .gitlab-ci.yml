@@ -19,10 +19,9 @@ stages:
   extends:
     - .documentation:python-conda:requirements
   script:
-    - pip install mystmd
     - cd $DOCUMENTATION_SOURCEDIR
     - export BASE_URL="/vre/documentation"
-    - myst build --html
+    - jupyter book build --html
   artifacts:
     paths:
       - $DOCUMENTATION_BUILDDIR
