@@ -13,6 +13,9 @@ project:
     - file: concept.md
     - title: Write
       children:
+      - file: write/markdown_cheet_sheet.md
+      - file: write/raw.md
+      - file: write/formatted.md
       - file: markdown.md
       - file: notebook.ipynb
     - file: deploy.md

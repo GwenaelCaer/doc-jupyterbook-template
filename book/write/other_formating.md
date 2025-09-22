@@ -4,21 +4,6 @@ authors:
   - name: Gwenaël Caër
 ---
 
-## Basics
-
-### Text formatting
-
-**strong**, _emphasis_, `literal text`, \*escaped symbols\*
-
-### Bullet points and numbered lists
-
-- Lists can start with `-` or `*`
-  * My other, nested
-  * bullet point list!
-
-1. My numbered list
-2. has two points
-
 ### Task lists
 
 - [x] Create a community around Jupyter Book
@@ -34,14 +19,6 @@ authors:
 
 $ax^2 + bx + c = 0$
 
-### Code blocks
-
-```python
-a, b = 10, 8
-c = a + b
-
-print("The sum of", a, "and", b, "is", c)
-```
 
 ## Directives
 
