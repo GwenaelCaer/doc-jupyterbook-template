@@ -29,4 +29,4 @@ site:
   template: book-theme
   options:
     favicon: https://www.odatis-ocean.fr/typo3conf/ext/odatis_template/Resources/Public/Icons/favicon.ico
-    logo: ../logo.svg
+    logo: _static/logo.svg
