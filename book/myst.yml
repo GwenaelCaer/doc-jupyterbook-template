@@ -2,8 +2,10 @@
 version: 1
 project:
   id: 86267f48-908a-4cde-935a-0a271ea2459a
-  jupyter: true
-  github: https://gitlab.ifremer.fr/odatis-public/training/doc-jupyterbook-template
+  jupyter:
+    binder:
+      repo: https://gitlab.ifremer.fr/odatis-public/training/doc-jupyterbook-template
+      ref: main
   # title:
   # description:
   # keywords: []
