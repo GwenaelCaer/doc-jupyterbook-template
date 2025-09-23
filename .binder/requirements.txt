@@ -2,4 +2,5 @@ cartopy
 fsspec
 matplotlib
 numpy
+s3fs
 xarray
