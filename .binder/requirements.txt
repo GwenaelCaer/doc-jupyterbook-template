@@ -1,6 +1,9 @@
 cartopy
 fsspec
+h5netcdf
+ipython
 matplotlib
 numpy
+pandas
 s3fs
 xarray
