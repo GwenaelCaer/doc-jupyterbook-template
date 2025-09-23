@@ -1,5 +1,5 @@
 cartopy
-fsspex
+fsspec
 matplotlib
 numpy
 xarray
