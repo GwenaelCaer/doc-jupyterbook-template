@@ -16,7 +16,7 @@ project:
       children:
       - file: write/markdown.md
       - file: write/notebook.ipynb
-      - file: write/odatis.ipynb
+      - file: write/matplotlib.ipynb
     - title: Build
       children:
       - file: build/static.md
