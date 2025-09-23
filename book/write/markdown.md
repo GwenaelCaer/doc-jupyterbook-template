@@ -2,6 +2,9 @@
 title: Narrative Text
 authors:
   - name: Gwenaël Caër
+exports:
+  - format: pdf
+    template: arxiv_two_column
 ---
 
 ## Basics

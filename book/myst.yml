@@ -4,7 +4,7 @@ project:
   id: 86267f48-908a-4cde-935a-0a271ea2459a
   jupyter: true
   github: https://github.com/GwenaelCaer/doc-jupyterbook-template
-  # title:
+  title: JupyterBook Template
   # description:
   # keywords: []
   # authors: []
@@ -12,13 +12,19 @@ project:
   # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   toc:
     - file: index.md
-    - file: concept.md
     - title: Write
       children:
       - file: write/markdown.md
       - file: write/notebook.ipynb
-    - file: deploy.md
-    - file: publish.md
+    - title: Build
+      children:
+      - file: build/static.md
+      - file: build/article.md
+      - file: build/dynamic.md
+      - file: build/pdf.md
+    - title: Publish
+      children:
+      - file: publish/index.md
 site:
   template: book-theme
   options:
