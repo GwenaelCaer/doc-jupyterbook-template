@@ -50,8 +50,8 @@ print("The sum of", a, "and", b, "is", c)
 
 ### Images
 
-```{image} https://www.odatis-ocean.fr/fileadmin/user_upload/Logo-Odatis_fullsize.png
-```
+<!-- ```{image} https://www.odatis-ocean.fr/fileadmin/user_upload/Logo-Odatis_fullsize.png
+``` -->
 
 ### Admonitions
 
