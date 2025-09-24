@@ -1,6 +1,5 @@
 **/_build
 .venv
-**/exports
 DEV.md
 presentation
 **/_old
