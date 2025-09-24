@@ -17,6 +17,7 @@ project:
       - file: write/markdown.md
       - file: write/notebook.ipynb
       - file: write/matplotlib.ipynb
+      - file: write/matplotlib-soft.ipynb
     - title: Build
       children:
       - file: build/static.md
