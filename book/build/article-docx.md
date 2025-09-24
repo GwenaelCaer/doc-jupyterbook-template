@@ -1,5 +1,5 @@
 ---
-title: Analyse de données NetCDF avec Xarray
+title: Article - DOCX
 authors:
   - name: Gwenaël CAËR
     affiliations:
