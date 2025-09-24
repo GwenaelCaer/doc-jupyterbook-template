@@ -5,25 +5,16 @@ project:
   jupyter: true
   github: https://github.com/GwenaelCaer/doc-jupyterbook-template
   title: JupyterBook Template
-  # description:
-  # keywords: []
-  # authors: []
-  # github:
-  # To autogenerate a Table of Contents, run "jupyter book init --write-toc"
   toc:
     - file: index.md
     - title: Write
       children:
       - file: write/markdown.md
       - file: write/notebook.ipynb
-      - file: write/matplotlib.ipynb
-      - file: write/matplotlib-soft.ipynb
     - title: Build
       children:
-      - file: build/static.md
-      - file: build/article.md
-      - file: build/dynamic.md
-      - file: build/pdf.md
+      - file: build/article-pdf.md
+      - file: build/article-docx.md
     - title: Publish
       children:
       - file: publish/index.md

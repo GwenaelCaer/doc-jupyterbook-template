@@ -9,9 +9,9 @@ abstract: |
   Cet article présente l'utilisation de la bibliothèque Python Xarray pour la lecture, l'exploration et l'analyse de fichiers NetCDF. 
   Les fichiers NetCDF sont largement utilisés pour stocker des données multidimensionnelles en sciences environnementales et océanographiques.
 exports:
-  - format: docx
-#   - format: pdf
-    # template: lapreprint
+  - format: pdf
+    template: arxiv_two_column
+    output: exports/article-pdf.pdf
 ---
 
 # Introduction
